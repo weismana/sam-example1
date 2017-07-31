@@ -23,3 +23,15 @@ Resources:
                 Properties:
                   Path: /sam
                   Method: get
+    GetFooCount:
+        Type: AWS::Serverless::Function
+        Properties:
+            Handler: index.foo
+            Runtime: nodejs4.3
+            CodeUri: ./
+            Events:
+              GetResource:
+                Type: Api
+                Properties:
+                  Path: /foo
+                  Method: get

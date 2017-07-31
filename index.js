@@ -32,6 +32,25 @@ exports.handler = (event, context, callback) => {
     });
 }
 
+exports.foo = (event, context, callback) => {
+
+    emitLambdaAge();
+
+    var foo = 44;
+
+    console.log('foo : ' + foo);
+
+    callback(null, {
+        "statusCode": 200,
+        "body": foo,
+        "headers":
+        {
+            "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+            "Access-Control-Allow-Methods": "GET,OPTIONS",
+        }
+    });
+}
+
 function emitLambdaAge() {
     var now = moment();
     var lambdaAnnouncement = moment('2014-11-04');
