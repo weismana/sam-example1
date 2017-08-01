@@ -28,7 +28,7 @@ Resources:
         Properties:
             Handler: com.amit.lambda.foo.LambdaFunctionHandler
             Runtime: java8
-            CodeUri: ./
+            CodeUri: ./foo.jar
             Events:
               GetResource:
                 Type: Api
