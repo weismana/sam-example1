@@ -36,7 +36,7 @@ exports.foo = (event, context, callback) => {
 
     emitLambdaAge();
 
-    var foo = 44;
+    var foo = 55;
 
     console.log('foo : ' + foo);
 
