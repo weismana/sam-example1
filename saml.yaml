@@ -26,8 +26,8 @@ Resources:
     GetFooCount:
         Type: AWS::Serverless::Function
         Properties:
-            Handler: index.foo
-            Runtime: nodejs4.3
+            Handler: com.amit.lambda.foo.LambdaFunctionHandler
+            Runtime: java8
             CodeUri: ./
             Events:
               GetResource:
