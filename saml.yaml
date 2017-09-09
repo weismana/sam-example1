@@ -47,3 +47,15 @@ Resources:
                 Properties:
                   Path: /version
                   Method: get
+    GetVersionVaca:
+        Type: AWS::Serverless::Function
+        Properties:
+            Handler: com.vacaguru.lambda1.interface1
+            Runtime: java8
+            CodeUri: https://s3.amazonaws.com/vacaguru-server-code/ALI1.jar
+            Events:
+              GetResource:
+                Type: Api
+                Properties:
+                  Path: /version-vaca
+                  Method: get
