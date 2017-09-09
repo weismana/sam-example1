@@ -35,7 +35,7 @@ Resources:
                 Properties:
                   Path: /foo
                   Method: get
-    GetFooCount:
+    GetVersion:
         Type: AWS::Serverless::Function
         Properties:
             Handler: com.amit.lambda.foo.VersionHandler
